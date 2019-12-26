@@ -1,0 +1,30 @@
+
+<h1> Rides</h1>
+<p><%= @count %></p>
+<table border = "2">
+	<tr>
+		<td> Cab ID </td>
+		<td> Date </td>
+		<td> Location </td>
+		<td> Time </td>
+		<td> Driver ID </td>
+		<td> Driver name </td>
+		<td> Request count </td>
+		<td> View requests </td>
+
+	</tr>
+
+	<% for d in @ride%>
+
+	<tr>
+	<td><%=d.cab_id%></td>
+	<td><%=d.date%></td>
+	<td><%=d.location%></td>
+	<td><%=d.time%></td>
+	<td><%=d.driver_id%></td>
+	<td><%=d.driver.first_name + "" + d.driver.last_name%></td>
+	<td><%=d.ride_requests.count%></td>
+	<td><%= link_to 'View Requests', ride_ride_requests_path(d)%></td>
+    </tr> 
+
+    <%end%>

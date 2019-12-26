@@ -1,0 +1,13 @@
+<h1>Request list</h1>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Status</th>
+</tr>
+
+<% for r in @ride_request%>
+<tr>
+	<td><%=r.user.first_name%></td>
+</tr>
+<%end%>
+</table>
