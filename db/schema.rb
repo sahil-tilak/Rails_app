@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_26_045019) do
+ActiveRecord::Schema.define(version: 2019_12_26_095332) do
 
   create_table "cabs", force: :cascade do |t|
     t.string "registration_number"
@@ -24,6 +24,11 @@ ActiveRecord::Schema.define(version: 2019_12_26_045019) do
     t.string "last_name"
     t.string "contact_number"
     t.string "license"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "registration_number_validations", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
