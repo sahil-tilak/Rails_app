@@ -1,0 +1,2 @@
+class BookCabController < ApplicationController
+end

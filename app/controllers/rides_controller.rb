@@ -5,4 +5,12 @@ class RidesController < ApplicationController
         @ride = Ride.all.includes(:driver)
 
 	end
+	# def new
+	# # 	redirect_to rides_paath
+	#    render :new
+	# end
+
+	# def create
+	# 	redirect_to rides_path
+	# end
 end

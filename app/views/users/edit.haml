@@ -1,0 +1,22 @@
+%h1 Edit user
+
+= form_with model: @user, url: "/users/dashboard", method: "POST" do |u|
+  %br
+  = label_tag(:first_name,"First Name")
+  = u.text_field(:first_name)
+  %br
+  %br
+  = label_tag(:last_name, "Last Name")
+  = u.text_field(:last_name)
+  %br
+  %br
+  = label_tag(:email_id,"Email ID")
+  = u.text_field(:email_id)
+  %br 
+  %br
+  = label_tag(:contact_no,"Contact Number")
+  = u.text_field(:contact_no)
+  %br
+  %br
+  = u.submit("Submit")
+  

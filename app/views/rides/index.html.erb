@@ -3,14 +3,14 @@
 <p><%= @count %></p>
 <table border = "2">
 	<tr>
-		<td> Cab ID </td>
-		<td> Date </td>
-		<td> Location </td>
-		<td> Time </td>
-		<td> Driver ID </td>
-		<td> Driver name </td>
-		<td> Request count </td>
-		<td> View requests </td>
+		<th> Cab ID </th>
+		<th> Date </th>
+		<th> Location </th>
+		<th> Time </th>
+		<th> Driver ID </th>
+		<th> Driver name </th>
+		<th> Request count </th>
+		<th> View requests </th>
 
 	</tr>
 
@@ -24,7 +24,7 @@
 	<td><%=d.driver_id%></td>
 	<td><%=d.driver.first_name + "" + d.driver.last_name%></td>
 	<td><%=d.ride_requests.count%></td>
-	<td><%= link_to 'View Requests', ride_ride_requests_path(d)%></td>
+	<td><%= link_to 'View Requests', ride_ride_requests_url(d)%></td>
     </tr> 
 
     <%end%>

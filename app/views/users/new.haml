@@ -1,0 +1,32 @@
+/ %form{ action: "/rides", method: "POST"}
+/    First Name
+/    %br
+/    %input{type:"text", name:"first_name", id:"first_name"}
+/    %br
+/    Last Name
+/    %br
+/    %input{type:"text", name:"last_name", id:"last_name"}
+/    %br
+/    %input{type:"submit", value:"Submit"}
+%h1 Create New user
+
+= form_with model: @user, url: "/users", method: "POST" do |u|
+  %br
+  = label_tag(:first_name,"First Name")
+  = u.text_field(:first_name)
+  %br
+  %br
+  = label_tag(:last_name, "Last Name")
+  = u.text_field(:last_name)
+  %br
+  %br
+  = label_tag(:email_id,"Email ID")
+  = u.text_field(:email_id)
+  %br 
+  %br
+  = label_tag(:contact_no,"Contact Number")
+  = u.text_field(:contact_no)
+  %br
+  %br
+  = u.submit("Submit")
+  
