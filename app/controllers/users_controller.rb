@@ -6,9 +6,11 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(user_params)
 		if @user.save
+			flash.alert = "User created"
 			redirect_to admin_index_path
 		else
-			render :new_user_url
+			flash.alert = "Invalid Input"
+			redirect_to new_user_path
 		end
 	end
 
